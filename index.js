@@ -23,15 +23,25 @@ dbConnection()
 
 
 //* MIDDLEWARE
-
+//? modeleList & modeleDetailList
+app.use(require('./src/middlewares/findSearchSortPage'))
 
 
 
 //* ROUTES
 
+app.all('/',(req,res)=>{
 
+    res.send({
+        error:false,
+        message:'Welcome to API Services',
+        isLogin:req.isLogin,
+        user:req.user
+    })
 
+})
 
+app.use('/users',require('./src/routers/user'))
 
 
 
