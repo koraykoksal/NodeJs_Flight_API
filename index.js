@@ -35,7 +35,8 @@ dbConnection()
 
 
 
-
+// ERROR HANDLER
+app.use(require('./src/middlewares/errorHandler'))
 
 
 // run server
