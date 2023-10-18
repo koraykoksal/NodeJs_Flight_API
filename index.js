@@ -16,6 +16,9 @@ app.use(express.json())
 
 //* CONNECT DATABASE
 
+const {dbConnection}=require('./src/configs/dbConnection')
+dbConnection()
+
 
 
 
