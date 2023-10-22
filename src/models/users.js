@@ -22,6 +22,7 @@ const UserSchema=new mongoose.Schema({
         type:String,
         trim:true,
         unique:false,
+        required:true,
         //?girilen parolayı şifreleme yap
         set:(password)=>passwordEncrypt(password)
     },
