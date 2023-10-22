@@ -47,6 +47,7 @@ app.use('/users',require('./src/routers/user'))
 app.use('/passenger',require('./src/routers/passanger'))
 app.use('/flight',require('./src/routers/flight'))
 app.use('/reservation',require('./src/routers/reservation'))
+app.use('/auth',require('./src/routers/auth'))
 
 
 // ERROR HANDLER
