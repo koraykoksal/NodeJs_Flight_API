@@ -12,8 +12,8 @@ const user = require('../controllers/user')
 //? URL : /users
 
 router.route('/')
-.post(isLogin,user.list)
-// .post(user.create)
+.get(user.list)
+.post(user.create)
 
 
 router.route('/:id')
