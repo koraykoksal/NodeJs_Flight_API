@@ -26,6 +26,7 @@ dbConnection()
 //? modeleList & modeleDetailList
 app.use(require('./src/middlewares/findSearchSortPage'))
 
+app.use(require('./src/middlewares/authentication'))
 
 
 //* ROUTES

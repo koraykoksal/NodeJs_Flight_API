@@ -4,15 +4,16 @@
 // route işlemleri için router dahil edilir
 const router = require('express').Router()
 
+const {isLogin} = require('../middlewares/permission')
 
 // route işlemlerinin çalışması için user controller dahil edilir.
 const user = require('../controllers/user')
 
-//? URL : /user
+//? URL : /users
 
 router.route('/')
-.get(user.list)
-.post(user.create)
+.post(isLogin,user.list)
+// .post(user.create)
 
 
 router.route('/:id')

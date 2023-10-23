@@ -75,7 +75,7 @@ module.exports={
             }
         */
 
-        const refreshToken = req.body?.token?.refresh
+        const refreshToken = req.body?.token?.refreshToken
 
         if (refreshToken) {
 
