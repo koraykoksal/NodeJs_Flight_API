@@ -15,13 +15,13 @@ const permission = require('../middlewares/permission')
 
 router.route('/')
 .get(passanger.list)
-.post(passanger.create)
+.post(permission.isAdmin,passanger.create)
 
 
 router.route('/:id')
 .get(passanger.read)
-.put(passanger.update)
-.patch(passanger.update)
+.put(permission.isAdmin,passanger.update)
+.patch(permission.isAdmin,passanger.update)
 .delete(permission.isAdmin,passanger.delete)
 
 

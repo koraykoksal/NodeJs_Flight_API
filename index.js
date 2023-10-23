@@ -29,6 +29,10 @@ app.use(require('./src/middlewares/findSearchSortPage'))
 app.use(require('./src/middlewares/authentication'))
 
 
+//* LOGGER
+app.use(require('./src/helpers/logger'))
+
+
 //* ROUTES
 
 app.all('/',(req,res)=>{
