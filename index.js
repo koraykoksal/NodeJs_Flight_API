@@ -48,11 +48,11 @@ app.all('/',(req,res)=>{
 
 
 
-app.use('/users',require('./src/routers/user'))
-app.use('/passenger',require('./src/routers/passanger'))
-app.use('/flight',require('./src/routers/flight'))
-app.use('/reservation',require('./src/routers/reservation'))
-app.use('/auth',require('./src/routers/auth'))
+app.use('/api/users',require('./src/routers/user'))
+app.use('/api/passenger',require('./src/routers/passanger'))
+app.use('/api/flight',require('./src/routers/flight'))
+app.use('/api/reservation',require('./src/routers/reservation'))
+app.use('/api/auth',require('./src/routers/auth'))
 
 
 // ERROR HANDLER
