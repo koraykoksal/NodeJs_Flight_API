@@ -4,7 +4,7 @@
 // route işlemleri için router dahil edilir
 const router = require('express').Router()
 
-const {isLogin} = require('../middlewares/permission')
+const permission = require('../middlewares/permission')
 
 // route işlemlerinin çalışması için user controller dahil edilir.
 const user = require('../controllers/user')

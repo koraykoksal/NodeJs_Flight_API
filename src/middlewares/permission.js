@@ -37,7 +37,7 @@ module.exports={
     isStafforAdmin:(req,res,next)=>{
 
         //? .env dosyasınında NODE_ENV == "development" olarak yazılmış ise bir sonraki satırda yazan kodları çalıştırmaz
-        if(process.env.NODE_ENV == 'development') return next()
+        // if(process.env.NODE_ENV == 'development') return next()
 
         if(req.user && (req.user.isAdmin && req.user.isStaff)){
             next()

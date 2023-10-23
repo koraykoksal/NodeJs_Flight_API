@@ -83,10 +83,18 @@ module.exports={
         */
 
         const data = await Passenger.deleteOne({ _id: req.params.id })
+        const newData = await Passenger.findOne({_id:req.params.id})
 
-        res.status(data.deletedCount ? 204 : 404).send({
-            error: !data.deletedCount,
-            data
+        // res.status(data.deletedCount ? 204 : 404).send({
+        //     error: !data.deletedCount,
+        //     data,
+        //     result:newData
+        // })
+
+        res.status(204).send({
+            error: false,
+            data,
+            result:newData
         })
 
     },
